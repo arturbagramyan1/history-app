@@ -11,6 +11,7 @@ function HistoryList() {
 				setItems(data);
 			})
 			.catch(console.error);
+		//because of strict mode my API request fetches 2 times
 	}, []);
 
 	return (

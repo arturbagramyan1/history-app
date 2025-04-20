@@ -1,14 +1,16 @@
+import "./HistoryCard.css";
+
 function HistoryCard({ item }) {
 	const eventDate = new Date(item.event_date_utc).toLocaleDateString();
 
 	return (
-		<div className="">
+		<div className="card">
 			<h2>{item.title}</h2>
 			<p>
 				<strong>Date:</strong> {eventDate}
 			</p>
 			<p>{item.details}</p>
-			<div className="">
+			<div className="links">
 				{item.links.article && (
 					<a href={item.links.article} target="_blank">
 						Article
